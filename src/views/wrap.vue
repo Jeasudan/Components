@@ -5,14 +5,14 @@
         <MyHeader />
       </Header>
       <Layout>
-        <Sider :style="{ background: '#5b6270' }"> 菜单 </Sider>
-        <Layout :style="{ padding: '0 24px 24px' }">
-          <Breadcrumb :style="{ margin: '24px 0' }"> mgv , </Breadcrumb>
-          <Content
-            :style="{ padding: '24px', minHeight: '280px', background: '#fff' }"
-          >
-            <!-- Content -->
-            <FirstLook  />
+        <Sider hide-trigger style="background: #5b6270; height: 800px">
+          <ActiveMenu />
+        </Sider>
+        <Layout :style="{ padding: '15px' }">
+          <!-- <Breadcrumb :style="{ margin: '24px 0' }"> mgv , </Breadcrumb> -->
+          <Content style="background: #fff">
+            <!-- <Home /> -->
+            <router-view></router-view>
           </Content>
         </Layout>
       </Layout>
@@ -22,13 +22,19 @@
 
 <script>
 import MyHeader from "../common/Header.vue";
-import FirstLook from "./Home/firstLook.vue";
+import ActiveMenu from "../common/Menu/Menu";
+
+// import Home from "./Home/home.vue";
 
 export default {
   name: "wrap",
   components: {
     MyHeader,
-    FirstLook
+    ActiveMenu,
+    // Home,
+  },
+  data() {
+    return {};
   },
 };
 </script>

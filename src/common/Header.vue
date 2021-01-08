@@ -20,7 +20,6 @@
   justify-content: space-between;
   .headLeft {
     display: flex;
-
     width: 300px;
     .logo {
       img {

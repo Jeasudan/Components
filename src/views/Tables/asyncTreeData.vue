@@ -1,14 +1,13 @@
 <template>
-  <div class="firstLook">nxiasdcxadwsc</div>
+  <div class="asyncTreeData">异步树形</div>
 </template>
 
 <script>
 export default {
-  name: "FirstLook",
+  name: "asyncTreeData",
   components: {},
 };
 </script>
 
 <style scoped lang="less">
 </style>
-

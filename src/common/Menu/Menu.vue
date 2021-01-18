@@ -1,12 +1,14 @@
 <template>
   <div>
-    <Menu active-name="1-1" theme="dark" width="auto" open-names="['1']" >
+    <Menu
+      :active-name="0"
+      ref="menu"
+      theme="dark"
+      width="auto"
+      :open-names="['1', '2', '3', '4']"
+    >
       <div>
-        <MenuItem
-          name="home"
-          to="home"
-          
-        >
+        <MenuItem name="0" to="home">
           <Icon type="ios-home-outline" />
           首页
         </MenuItem>
@@ -33,6 +35,14 @@
           </template>
           <MenuItem name="3-1" to="dynamicForm">动态表单</MenuItem>
         </Submenu>
+        <Submenu name="4">
+          <template slot="title">
+            <Icon type="ios-list-box-outline" />
+            选择器
+          </template>
+          <MenuItem name="4-1" to="inputSelect">可输入下拉</MenuItem>
+          <MenuItem name="4-2" to="treeSelect">树形下拉</MenuItem>
+        </Submenu>
       </div>
     </Menu>
   </div>
@@ -46,6 +56,13 @@ export default {
   data() {
     return {};
   },
+  created() {
+    this.$nextTick(() => {
+      this.$refs.menu.updateOpened();
+      this.$refs.menu.updateActiveName();
+    });
+  },
+  methods: {},
 };
 </script>
 

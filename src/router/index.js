@@ -9,6 +9,8 @@ import AsyncTreeData from '../views/Tables/asyncTreeData.vue'
 import CombinePage from '../views/Tables/combinePage.vue'
 import RadioTree from '../views/Tree/radioTree.vue'
 import DynamicForm from '../views/Form/dynamicForm.vue'
+import InputSelect from '../views/Select/inputSelect.vue'
+import TreeSelect from '../views/Select/treeSelect.vue'
 
 
 
@@ -17,17 +19,10 @@ Vue.use(Router)
 
 export default new Router({
     routes:[
-        // {
-        //     path:'/home',
-        //     name:'Home',
-        //     // meta: {title: '自述文件'},
-        //     // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-        //     component:Home
-        // },
         {
             path:'/',
             name:'Wrap',  //框架
-            redirect:'/home',
+            // redirect:'/home',
             // meta: {title: '自述文件'},
             // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
             component:Wrap,
@@ -80,6 +75,20 @@ export default new Router({
                     // meta: {title: '自述文件'},
                     // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
                     component:DynamicForm
+                },
+                {
+                    path:'/inputSelect', 
+                    name:'InputSelect',
+                    // meta: {title: '自述文件'},
+                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+                    component:InputSelect
+                },
+                {
+                    path:'/treeSelect', 
+                    name:'TreeSelect',
+                    // meta: {title: '自述文件'},
+                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+                    component:TreeSelect
                 },
             ]
         },

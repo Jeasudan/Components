@@ -1,16 +1,10 @@
 <template>
   <div>
-    <Menu
-      :active-name="0"
-      ref="menu"
-      theme="dark"
-      width="auto"
-      :open-names="['1', '2', '3', '4']"
-    >
+    <Menu active-name="0" ref="menu" theme="dark" width="auto" :open-names="['1', '2', '3', '4', '5']">
       <div>
         <MenuItem name="0" to="home">
-          <Icon type="ios-home-outline" />
-          首页
+        <Icon type="ios-home-outline" />
+        首页
         </MenuItem>
         <Submenu name="1">
           <template slot="title">
@@ -27,6 +21,8 @@
             树形
           </template>
           <MenuItem name="2-1" to="radioTree">单选树</MenuItem>
+          <MenuItem name="2-2" to="functionTree">多功能树</MenuItem>
+          <MenuItem name="2-3" to="elementTree">饿了么树</MenuItem>
         </Submenu>
         <Submenu name="3">
           <template slot="title">
@@ -37,11 +33,19 @@
         </Submenu>
         <Submenu name="4">
           <template slot="title">
-            <Icon type="ios-list-box-outline" />
+            <Icon type="ios-search" />
             选择器
           </template>
           <MenuItem name="4-1" to="inputSelect">可输入下拉</MenuItem>
           <MenuItem name="4-2" to="treeSelect">树形下拉</MenuItem>
+        </Submenu>
+        <Submenu name="5">
+          <template slot="title">
+            <Icon type="ios-train-outline" />
+            拖拽
+          </template>
+          <MenuItem name="5-1" to="vueDragable">vuedraggable插件使用</MenuItem>
+          <MenuItem name="5-2" to="sortablejs">sortable.js插件使用</MenuItem>
         </Submenu>
       </div>
     </Menu>
@@ -51,7 +55,7 @@
 <script>
 // import MenuList from "./menuList";
 export default {
-  name: "menu",
+  name: "mymenu",
   // mixins: [MenuList],
   data() {
     return {};

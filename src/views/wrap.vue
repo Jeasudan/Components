@@ -1,23 +1,23 @@
 <template>
-  <div class="wrap">
-    <Layout>
-      <Header class="headerWrap">
-        <MyHeader />
-      </Header>
-      <Layout>
-        <Sider hide-trigger style="background: #5b6270; height: 800px">
-          <ActiveMenu />
-        </Sider>
-        <Layout :style="{ padding: '15px' }">
-          <!-- <Breadcrumb :style="{ margin: '24px 0' }"> mgv , </Breadcrumb> -->
-          <Content style="background: #fff">
-            <!-- <Home /> -->
-            <router-view></router-view>
-          </Content>
-        </Layout>
+  <!-- <div > -->
+  <Layout class="wrap">
+    <Header class="headerWrap">
+      <MyHeader />
+    </Header>
+    <Layout class="contentWrap">
+      <Sider hide-trigger class="sider">
+        <ActiveMenu />
+      </Sider>
+      <Layout class="content">
+        <!-- <div style="padding: 10px"> -->
+        <Content style="background: #fff">
+          <router-view></router-view>
+        </Content>
+        <!-- </div> -->
       </Layout>
     </Layout>
-  </div>
+  </Layout>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -42,6 +42,24 @@ export default {
 <style scoped lang="less">
 .wrap {
   background: #f5f7f9;
+  overflow: hidden;
+  .headerWrap {
+    height: 60px;
+  }
+  .contentWrap {
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    .sider {
+      background: #515a6e;
+      overflow-y: auto;
+    }
+    .sider::-webkit-scrollbar {
+      display: none;
+    }
+    .content {
+      padding: 5px;
+    }
+  }
 }
 </style>
 

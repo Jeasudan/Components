@@ -10,5 +10,8 @@ export default {
 </script>
 
 <style scoped lang="less">
+// .home {
+//   height: 3000px;
+// }
 </style>
 

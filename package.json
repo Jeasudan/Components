@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "view-design": "^4.4.0-rc.4",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

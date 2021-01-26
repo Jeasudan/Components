@@ -1,0 +1,33 @@
+{
+    "options": [{
+        "id": "avdfv",
+        "label": "avdfv",
+        "children": [{
+          "id": "aavdfvf",
+          "label": "aavdvfd"
+        }, {
+          "id": "abvdfvf",
+          "label": "abvdfvd"
+        }]
+      }, {
+        "id": "bdfvd",
+        "label": "bvdfvf",
+        "children": [{
+          "id": "aavdfvfd",
+          "label": "aavdvfd"
+        }, {
+          "id": "abvdfvf",
+          "label": "abvdfvd"
+        }]
+      }, {
+        "id": "cvdf",
+        "label": "cvdfv",
+        "children": [{
+          "id": "aavdfvfd",
+          "label": "aavdvfd"
+        }, {
+          "id": "abvdfvf",
+          "label": "abvdfvd"
+        }]
+      }]
+}

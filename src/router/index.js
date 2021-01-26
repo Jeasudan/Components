@@ -18,114 +18,113 @@ import Sortablejs from '../views/Dragable/sortablejs.vue'
 
 
 
-
 Vue.use(Router)
 
 export default new Router({
-    routes:[
-        {
-            path:'/',
-            name:'Wrap',  //框架
-            redirect:'/home',
-            // meta: {title: '自述文件'},
-            // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-            component:Wrap,
-            children:[
-                {
-                    path:'/home',  //首页
-                    name:'Home',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:Home
-                },
-                {
-                    path:'/dragTable', 
-                    name:'DragTable',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:DragTable
-                },
-                {
-                    path:'/activeColumn', 
-                    name:'ActiveColumn',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:ActiveColumn
-                },
-                {
-                    path:'/asyncTreeData', 
-                    name:'AsyncTreeData',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:AsyncTreeData
-                },
-                {
-                    path:'/combinePage', 
-                    name:'CombinePage',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:CombinePage
-                },
-                {
-                    path:'/radioTree', 
-                    name:'RadioTree',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:RadioTree
-                },
-                {
-                    path:'/functionTree', 
-                    name:'FunctionTree',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:FunctionTree
-                },
-                {
-                    path:'/elementTree', 
-                    name:'ElementTree',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:ElementTree
-                },
-                {
-                    path:'/dynamicForm', 
-                    name:'DynamicForm',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:DynamicForm
-                },
-                {
-                    path:'/inputSelect', 
-                    name:'InputSelect',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:InputSelect
-                },
-                {
-                    path:'/treeSelect', 
-                    name:'TreeSelect',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:TreeSelect
-                },
-                {
-                    path:'/vueDragable', 
-                    name:'VueDragable',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:VueDragable
-                },
-                {
-                    path:'/sortablejs', 
-                    name:'Sortablejs',
-                    // meta: {title: '自述文件'},
-                    // component:resolve => require(['../views/Home/firstLook.vue'],resolve)
-                    component:Sortablejs
-                },
-            ]
-        },
-        
-    ]
+	routes:[
+		{
+			path:'/',
+			name:'Wrap',  //框架
+			redirect:'/home',
+			// meta: {title: '自述文件'},
+			// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+			component:Wrap,
+			children:[
+				{
+					path:'/home',  //首页
+					name:'Home',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:Home
+				},
+				{
+					path:'/dragTable', 
+					name:'DragTable',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:DragTable
+				},
+				{
+					path:'/activeColumn', 
+					name:'ActiveColumn',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:ActiveColumn
+				},
+				{
+					path:'/asyncTreeData', 
+					name:'AsyncTreeData',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:AsyncTreeData
+				},
+				{
+					path:'/combinePage', 
+					name:'CombinePage',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:CombinePage
+				},
+				{
+					path:'/radioTree', 
+					name:'RadioTree',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:RadioTree
+				},
+				{
+					path:'/functionTree', 
+					name:'FunctionTree',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:FunctionTree
+				},
+				{
+					path:'/elementTree', 
+					name:'ElementTree',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:ElementTree
+				},
+				{
+					path:'/dynamicForm', 
+					name:'DynamicForm',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:DynamicForm
+				},
+				{
+					path:'/inputSelect', 
+					name:'InputSelect',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:InputSelect
+				},
+				{
+					path:'/treeSelect', 
+					name:'TreeSelect',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:TreeSelect
+				},
+				{
+					path:'/vueDragable', 
+					name:'VueDragable',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:VueDragable
+				},
+				{
+					path:'/sortablejs', 
+					name:'Sortablejs',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:Sortablejs
+				},
+			]
+		},
+			
+	]
 })
 
 

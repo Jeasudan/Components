@@ -9,11 +9,10 @@
         <ActiveMenu />
       </Sider>
       <Layout class="content">
-        <!-- <div style="padding: 10px"> -->
-        <Content style="background: #fff">
+        <div style="height:36px;background:lightblue;margin-bottom:5px;"></div>
+        <Content style="background: #fff;overflow:hidden;">
           <router-view></router-view>
         </Content>
-        <!-- </div> -->
       </Layout>
     </Layout>
   </Layout>
@@ -58,6 +57,9 @@ export default {
     }
     .content {
       padding: 5px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
     }
   }
 }

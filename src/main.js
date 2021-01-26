@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import routers from './router'
+import axios from 'axios'
+
+require('./mock')
 
 import App from './App.vue'
 import ViewUI from 'view-design';
@@ -11,6 +14,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ViewUI);
 Vue.use(ElementUI);
 Vue.use(Router);
+
+Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
 

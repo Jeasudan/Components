@@ -2,7 +2,7 @@
 
 <template>
   <div class=treeSelect>
-    <treeselect v-model="value" :multiple="true" :options="options" />
+    <treeselect v-model="value" :multiple="true" :options="options" placeholder="请选择省份" :clearable="clearable" :searchable="searchable" />
   </div>
 </template>
 <script>
@@ -14,8 +14,8 @@ export default {
     return {
       // define the default value
       value: null,
-      options: []
-      // define options
+      options: [],
+      // isShow:
       // "options": [{
       //   "id": 'avdfv',
       //   "label": 'avdfv',
@@ -52,10 +52,12 @@ export default {
   },
   created() {
     this.$axios.get('/api/treeSelect').then((res) => {
-      this.options = res.data.data
+      console.log(this)
+      console.log(res.data)
+      this.options = res.data.options
     }).catch(function (err) {
       console.log(err);
-    });
+    })
   }
 };
 </script>

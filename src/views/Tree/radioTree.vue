@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Tree :data="data2" show-checkbox empty-text="暂无数据"></Tree>
+    <Tree :data="data2"
+          show-checkbox
+          empty-text="暂无数据"></Tree>
   </div>
 </template>
 

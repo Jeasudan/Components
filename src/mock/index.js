@@ -3,3 +3,4 @@ const Mock = require('mockjs');
 Mock.mock('/api/tableData', 'get', require('./table/tableData'));
 Mock.mock('/api/treeData', 'get', require('./tree/treeData'));
 Mock.mock('/api/treeSelect', 'get', require('./select/treeSelect'));
+Mock.mock('/api/searchOptions', 'get', require('./input/options'));

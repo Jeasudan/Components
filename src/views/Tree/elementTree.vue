@@ -1,10 +1,17 @@
 <template>
   <div>
     <div style="width:300px;">
-      <el-input placeholder="输入关键字进行过滤" v-model="filterText">
+      <el-input placeholder="输入关键字进行过滤"
+                v-model="filterText">
       </el-input>
 
-      <el-tree class="filter-tree" show-checkbox :data="data" :props="defaultProps" default-expand-all :filter-node-method="filterNode" ref="tree">
+      <el-tree class="filter-tree"
+               show-checkbox
+               :data="data"
+               :props="defaultProps"
+               default-expand-all
+               :filter-node-method="filterNode"
+               ref="tree">
       </el-tree>
     </div>
 

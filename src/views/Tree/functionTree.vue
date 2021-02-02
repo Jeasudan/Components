@@ -1,6 +1,9 @@
 <template>
   <!-- <div class="radioTree">单选树</div> -->
-  <Tree :data="data5" :render="renderContent" class="demo-tree-render" show-checkbox></Tree>
+  <Tree :data="data5"
+        :render="renderContent"
+        class="demo-tree-render"
+        show-checkbox></Tree>
 </template>
 
 <script>

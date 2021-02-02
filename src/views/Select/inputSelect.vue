@@ -2,16 +2,16 @@
   <div class="wrap">
     <datalist id="subjects">
       <option value="java">好</option>
-      <option value="c++" label="呵呵"></option>
-      <option value="js" label="不知道"></option>
+      <option value="c++"
+              label="呵呵"></option>
+      <option value="js"
+              label="不知道"></option>
     </datalist>
-    <input
-      type="text"
-      list="subjects"
-      width="200px;"
-      :value="val"
-      @change="getValue"
-    />
+    <input type="text"
+           list="subjects"
+           width="200px;"
+           :value="val"
+           @change="getValue" />
   </div>
 </template>
 <script>

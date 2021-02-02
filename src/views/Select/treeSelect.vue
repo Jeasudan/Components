@@ -2,7 +2,13 @@
 
 <template>
   <div class=treeSelect>
-    <treeselect v-model="value" :multiple="true" :options="options" placeholder="请选择省份" :clearable="clearable" :searchable="searchable" />
+    <treeselect v-model="value"
+                :multiple="true"
+                :options="options"
+                placeholder="请选择省份"
+                :clearable="clearable"
+                :searchable="searchable" />
+
   </div>
 </template>
 <script>
@@ -15,6 +21,8 @@ export default {
       // define the default value
       value: null,
       options: [],
+      clearable: true,
+      searchable: true
       // isShow:
       // "options": [{
       //   "id": 'avdfv',
@@ -63,6 +71,7 @@ export default {
 </script>
 <style scoped lang="less">
 .treeSelect {
+  width: 20%;
   .vue-treeselect {
     /deep/.vue-treeselect__multi-value-item {
       background: none;

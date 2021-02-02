@@ -13,8 +13,10 @@ import ElementTree from '../views/Tree/elementTree.vue'
 import DynamicForm from '../views/Form/dynamicForm.vue'
 import InputSelect from '../views/Select/inputSelect.vue'
 import TreeSelect from '../views/Select/treeSelect.vue'
+import IviewTreeSelect from '../views/Select/iview-tree-select.vue'
 import VueDragable from '../views/Dragable/vueDragable.vue'
 import Sortablejs from '../views/Dragable/sortablejs.vue'
+import InputSearchModal from '../views/input/inputSearchModal.vue'
 
 
 
@@ -108,6 +110,13 @@ export default new Router({
 					component:TreeSelect
 				},
 				{
+					path:'/iviewTreeSelect', 
+					name:'IviewTreeSelect',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:IviewTreeSelect
+				},
+				{
 					path:'/vueDragable', 
 					name:'VueDragable',
 					// meta: {title: '自述文件'},
@@ -120,6 +129,13 @@ export default new Router({
 					// meta: {title: '自述文件'},
 					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
 					component:Sortablejs
+				},
+				{
+					path:'/inputSearchModal', 
+					name:'InputSearchModal',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:InputSearchModal
 				},
 			]
 		},

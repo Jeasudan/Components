@@ -2,9 +2,17 @@
   <div>
     <div>{{ drag ? "拖拽中" : "拖拽停止" }}</div>
     <!--使用draggable组件-->
-    <draggable v-model="myArray" chosenClass="chosen" forceFallback="true" group="people" animation="1000" @start="onStart" @end="onEnd">
+    <draggable v-model="myArray"
+               chosenClass="chosen"
+               forceFallback="true"
+               group="people"
+               animation="1000"
+               @start="onStart"
+               @end="onEnd">
       <transition-group>
-        <div class="item" v-for="element in myArray" :key="element.id">
+        <div class="item"
+             v-for="element in myArray"
+             :key="element.id">
           {{ element.name }}
         </div>
       </transition-group>

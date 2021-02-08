@@ -63,6 +63,14 @@
           <MenuItem name="5-1"
                     to="inputSearchModal">输入弹窗查询</MenuItem>
         </Submenu>
+        <Submenu name="5">
+          <template slot="title">
+            <Icon type="ios-search" />
+            复选框
+          </template>
+          <MenuItem name="5-1"
+                    to="multistateCheckbox">多状态复选框</MenuItem>
+        </Submenu>
         <Submenu name="6">
           <template slot="title">
             <Icon type="ios-train-outline" />

@@ -17,6 +17,7 @@ import IviewTreeSelect from '../views/Select/iview-tree-select.vue'
 import VueDragable from '../views/Dragable/vueDragable.vue'
 import Sortablejs from '../views/Dragable/sortablejs.vue'
 import InputSearchModal from '../views/input/inputSearchModal.vue'
+import MultistateCheckbox from '../views/Checkbox/multistateCheckbox.vue'
 
 
 
@@ -136,6 +137,13 @@ export default new Router({
 					// meta: {title: '自述文件'},
 					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
 					component:InputSearchModal
+				},
+				{
+					path:'/multistateCheckbox', 
+					name:'MultistateCheckbox',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:MultistateCheckbox
 				},
 			]
 		},

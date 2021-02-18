@@ -81,6 +81,14 @@
           <MenuItem name="6-2"
                     to="sortablejs">sortable.js插件使用</MenuItem>
         </Submenu>
+        <Submenu name="7">
+          <template slot="title">
+            <Icon type="ios-train-outline" />
+            动态组件
+          </template>
+          <MenuItem name="7-1"
+                    to="DynamicComponents">动态组件的使用</MenuItem>
+        </Submenu>
       </div>
     </Menu>
   </div>

@@ -20,6 +20,8 @@ import InputSearchModal from '../views/input/inputSearchModal.vue'
 import MultistateCheckbox from '../views/Checkbox/multistateCheckbox.vue'
 
 
+import DynamicComponents from '../views/Useage/dynamicComponents'
+// import MultistateCheckbox from '../views/Checkbox/multistateCheckbox.vue'
 
 Vue.use(Router)
 
@@ -144,6 +146,13 @@ export default new Router({
 					// meta: {title: '自述文件'},
 					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
 					component:MultistateCheckbox
+				},
+				{
+					path:'/dynamicComponents', 
+					name:'DynamicComponents',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:DynamicComponents
 				},
 			]
 		},

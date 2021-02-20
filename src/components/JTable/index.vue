@@ -6,7 +6,7 @@
     <Table border
            :height='height'
            stripe
-           :columns="cols"
+           :columns="columns"
            :data="tableData"
            @on-selection-change="onSelect"></Table>
     <span style="margin-top:5px;float: left">已选择 <span style="font-size:15px">{{num}}</span> 条</span>
@@ -32,7 +32,7 @@ export default {
       loading: false,
       total: 0,
       initPage: 1,
-      num: 0
+      num: 0,
     }
   },
   props: {
@@ -54,24 +54,51 @@ export default {
       }
     },
     cols: {},
-    tableData: [],
+    tableData: {},
     checkBox: {
       type: Boolean,
       default: true
     }
   },
+  computed: {
+    columns() {
+      let obj = JSON.parse(JSON.stringify(this.cols))
+      if (this.checkBox) {
+        obj.unshift({
+          type: 'selection',
+          width: 60,
+          align: 'center'
+        })
+        console.log('this.cols', this.cols)
+      }
+      return obj
+    }
+  },
+  created() {
+    // this.columns = this.cols
+
+    // if (this.checkBox) {
+    //   this.columns.unshift({
+    //     type: 'selection',
+    //     width: 60,
+    //     align: 'center'
+    //   })
+    //   console.log('this.cols', this.cols)
+    // }
+  },
+  mounted() {
+    // this.getData(this.initPage)
+  },
   methods: {
     refresh() {
-      this.getData(1)
+      // this.getData(1)
     },
 
     getData(pageNum) {
       this.loading = true
       this.$axios.get(this.url, this.getPagingInfo(pageNum)).then(res => {
-        // this.$axios.get(this.url).then(res => {
-        this.tableData = res.result.data
+        this.tableData = res.data.data
         this.total = res.result.total
-        this.loading = false
       })
     },
     getPagingInfo(page) {
@@ -88,18 +115,8 @@ export default {
       })
     }
   },
-  mounted() {
-    this.getData(this.initPage)
-  },
-  created() {
-    if (this.checkBox) {
-      this.cols.unshift({
-        type: 'selection',
-        width: 60,
-        align: 'center'
-      })
-    }
-  }
+
+
 }
 </script>
 

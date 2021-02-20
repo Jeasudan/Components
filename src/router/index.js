@@ -20,8 +20,11 @@ import InputSearchModal from '../views/input/inputSearchModal.vue'
 import MultistateCheckbox from '../views/Checkbox/multistateCheckbox.vue'
 
 
-import DynamicComponents from '../views/Useage/dynamicComponents'
-// import MultistateCheckbox from '../views/Checkbox/multistateCheckbox.vue'
+import DynamicComponents from '../views/Useage/dynamicComponents/index.vue'
+import RouterComponents from '../views/Useage/routerComponents/index.vue'
+import A from '../views/Useage/routerComponents/comp/A.vue'
+import B from '../views/Useage/routerComponents/comp/B.vue'
+// import RouterComponents from '../views/Checkbox/multistateCheckbox.vue'
 
 Vue.use(Router)
 
@@ -153,6 +156,29 @@ export default new Router({
 					// meta: {title: '自述文件'},
 					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
 					component:DynamicComponents
+				},
+				{
+					path:'/routerComponents', 
+					name:'RouterComponents',
+					// meta: {title: '自述文件'},
+					// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+					component:RouterComponents,
+					children:[
+						{
+							path:'/A', 
+							name:'A',
+							// meta: {title: '自述文件'},
+							// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+							component:A
+						},
+						{
+							path:'/B', 
+							name:'B',
+							// meta: {title: '自述文件'},
+							// component:resolve => require(['../views/Home/firstLook.vue'],resolve)
+							component:B
+						},
+					]
 				},
 			]
 		},

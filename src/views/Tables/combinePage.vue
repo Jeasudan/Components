@@ -2,6 +2,7 @@
   <div ref="tableWrap"
        class="combinePage">
     <JTable :cols="columns1"
+            :checkBox="checkBox"
             :height="tableHeight"
             :url="url"
             :tableData="tableData"
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-import JTable from '../../components/jeasuTable'
+import JTable from '../../components/JTable/index.vue'
 export default {
   name: "combinePage",
   components: { JTable },
@@ -73,7 +74,7 @@ export default {
         }
       ],
       tableData: [],
-
+      checkBox: true
     }
   },
   computed: {

@@ -2,7 +2,7 @@
 
 <template>
   <div class=treeSelect>
-    <treeselect v-model="value"
+    <Treeselect v-model="value"
                 :multiple="true"
                 :options="options"
                 placeholder="请选择省份"

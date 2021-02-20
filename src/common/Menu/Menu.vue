@@ -63,31 +63,33 @@
           <MenuItem name="5-1"
                     to="inputSearchModal">输入弹窗查询</MenuItem>
         </Submenu>
-        <Submenu name="5">
+        <Submenu name="6">
           <template slot="title">
             <Icon type="ios-search" />
             复选框
           </template>
-          <MenuItem name="5-1"
-                    to="multistateCheckbox">多状态复选框</MenuItem>
-        </Submenu>
-        <Submenu name="6">
-          <template slot="title">
-            <Icon type="ios-train-outline" />
-            拖拽
-          </template>
           <MenuItem name="6-1"
-                    to="vueDragable">vuedraggable插件使用</MenuItem>
-          <MenuItem name="6-2"
-                    to="sortablejs">sortable.js插件使用</MenuItem>
+                    to="multistateCheckbox">多状态复选框</MenuItem>
         </Submenu>
         <Submenu name="7">
           <template slot="title">
             <Icon type="ios-train-outline" />
-            动态组件
+            拖拽
           </template>
           <MenuItem name="7-1"
+                    to="vueDragable">vuedraggable插件使用</MenuItem>
+          <MenuItem name="7-2"
+                    to="sortablejs">sortable.js插件使用</MenuItem>
+        </Submenu>
+        <Submenu name="8">
+          <template slot="title">
+            <Icon type="ios-train-outline" />
+            动态组件
+          </template>
+          <MenuItem name="8-1"
                     to="DynamicComponents">动态组件的使用</MenuItem>
+          <MenuItem name="8-2"
+                    to="routerComponents">路由切换组件</MenuItem>
         </Submenu>
       </div>
     </Menu>

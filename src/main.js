@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import Router from 'vue-router'
 import routers from './router'
 import axios from 'axios'
 
@@ -11,9 +10,11 @@ import 'view-design/dist/styles/iview.css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+// import components from './views/Useage/dynamicComponents/components/config/index.js'
+
 Vue.use(ViewUI);
 Vue.use(ElementUI);
-Vue.use(Router);
+// Vue.use(components);
 
 Vue.prototype.$axios = axios
 
